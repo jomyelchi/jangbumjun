@@ -1,0 +1,46 @@
+/* 리모컨 스타일 */
+#remote {
+    position: fixed; /* 화면에 고정 */
+    top: 170px; /* 화면 상단에서 60px 간격 */
+    right: 10px; /* 화면 오른쪽에서 10px 간격 */
+    display: flex;
+    flex-direction: column; /* 수직으로 배치 */
+    gap: 10px; /* 항목 간 간격 */
+    background-color: white; /* 배경색 흰색 */
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    color: black; /* 텍스트 색상 */
+    font-family: Arial, sans-serif;
+    z-index: 9999; /* 다른 요소보다 위에 표시 */
+}
+
+#remote ul {
+    list-style-type: decimal; /* 자동 번호 매기기 */
+    padding-left: 20px; /* 왼쪽 여백 */
+    margin: 0; /* 기본 margin 제거 */
+}
+
+#remote ul a {
+    text-decoration: none;
+    color: #000; /* 기본 텍스트 색상 */
+    font-size: 16px; /* 글자 크기 */
+    padding: 5px 0;
+    display: block; /* a 태그가 블록 요소로 동작하도록 */
+}
+
+#remote ul a:hover {
+    color: #F2506E; /* 버튼 색상 변경 */
+    transform: scale(1.05); /* 크기 확장 */
+}
+
+/* 반응형 디자인: 화면 크기가 768px 이하일 때 */
+@media (max-width: 768px) {
+    #remote {
+        top: 10px; /* 상단에서 10px 간격 */
+        left: 10px; /* 왼쪽에서 10px 간격 */
+    }
+    #remote a {
+        font-size: 14px; /* 작은 화면에서 글자 크기 줄임 */
+    }
+}
